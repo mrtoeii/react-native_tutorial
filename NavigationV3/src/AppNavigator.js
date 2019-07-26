@@ -10,6 +10,7 @@ import HomeScreen from './HomeScreen';
 import RegisterScreen from './RegisterScreen';
 import Tab1Screen from './Tab1Screen';
 import Tab2Screen from './Tab2Screen';
+import DetailScreen from './DetailScreen';
 
 const TabStack = createBottomTabNavigator({
     Tab1: {
@@ -70,6 +71,7 @@ const AppStack = createStackNavigator({
     // Home: {screen: HomeScreen},
     // Register: {screen: RegisterScreen},
     Tabs: {screen: TabStack},
+    Detail: {screen: DetailScreen}
 },{
     initialRouteName:'Tabs'
 })

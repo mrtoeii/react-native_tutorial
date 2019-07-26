@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View,Button,TouchableOpacity,Image} from 'react-native'
+import { Text, View,Button,TouchableOpacity,Image,AsyncStorage} from 'react-native'
 
 export default class HomeScreen extends Component {
 
-    onCilckLogin = () =>{
+    onCilckLogin = async () =>{
+        // AsyncStorage.setItem('username','lek_codemobiles').then(()=>{
+        //     this.props.navigation.navigate('AppScene')
+        // });
+        await AsyncStorage.setItem('username','lek_codemobiles')
         this.props.navigation.navigate('AppScene')
     }
     onRegister = () =>{
